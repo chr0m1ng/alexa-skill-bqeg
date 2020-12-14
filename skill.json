@@ -1,0 +1,72 @@
+{
+  "manifest": {
+    "publishingInformation": {
+      "locales": {
+        "pt-BR": {
+          "summary": "Bate que eu gosto ajuda você a bater seu ponto no tangerino e acompanhar as horas trabalhadas",
+          "examplePhrases": [
+            "Alexa abra bate que eu gosto",
+            "quantas horas trabalhei hoje",
+            "bater meu ponto"
+          ],
+          "keywords": [],
+          "name": "Bate que eu gosto",
+          "description": "Com a skill \"bate que eu gosto\" você pode bater o seu ponto do tangerino e olhar quantas horas você já trabalhou no dia atual.",
+          "smallIconUri": "file://assets/images/pt-BR_smallIconUri.png",
+          "largeIconUri": "file://assets/images/pt-BR_largeIconUri.png"
+        }
+      },
+      "automaticDistribution": {
+        "isActive": false
+      },
+      "isAvailableWorldwide": false,
+      "testingInstructions": "To start the skill:\n  - alexa, abrir bate que eu gosto\nAsk for something like working hours:\n  - quantas horas já trabalhei hoje?\nThe skill will reprompt asking to inform the employer code, you can answer like:\n  - meu código de empregador é M27CI\nThe skill will reprompt asking to inform the pin code, you can answer like:\n  - meu pin é 2910\nTry the working hours feature again:\n  - quantas horas já trabalhei hoje?",
+      "category": "SMART_HOME",
+      "distributionMode": "PUBLIC",
+      "distributionCountries": [
+        "BR"
+      ]
+    },
+    "apis": {
+      "custom": {
+        "endpoint": {
+          "uri": "arn:aws:lambda:us-east-1:285895892239:function:544ab3bb-c57b-4a29-850d-36f39ddf3c86:Release_0"
+        },
+        "interfaces": [],
+        "regions": {
+          "EU": {
+            "endpoint": {
+              "uri": "arn:aws:lambda:eu-west-1:285895892239:function:544ab3bb-c57b-4a29-850d-36f39ddf3c86:Release_0"
+            }
+          },
+          "NA": {
+            "endpoint": {
+              "uri": "arn:aws:lambda:us-east-1:285895892239:function:544ab3bb-c57b-4a29-850d-36f39ddf3c86:Release_0"
+            }
+          },
+          "FE": {
+            "endpoint": {
+              "uri": "arn:aws:lambda:us-west-2:285895892239:function:544ab3bb-c57b-4a29-850d-36f39ddf3c86:Release_0"
+            }
+          }
+        }
+      }
+    },
+    "manifestVersion": "1.0",
+    "permissions": [
+      {
+        "name": "alexa:devices:all:address:country_and_postal_code:read"
+      }
+    ],
+    "privacyAndCompliance": {
+      "allowsPurchases": false,
+      "locales": {
+        "pt-BR": {}
+      },
+      "containsAds": false,
+      "isExportCompliant": true,
+      "isChildDirected": false,
+      "usesPersonalInfo": false
+    }
+  }
+}

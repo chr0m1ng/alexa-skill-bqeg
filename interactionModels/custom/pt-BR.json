@@ -1,0 +1,184 @@
+{
+    "interactionModel": {
+        "languageModel": {
+            "invocationName": "bate que eu gosto",
+            "intents": [
+                {
+                    "name": "AMAZON.CancelIntent",
+                    "samples": []
+                },
+                {
+                    "name": "AMAZON.HelpIntent",
+                    "samples": []
+                },
+                {
+                    "name": "AMAZON.StopIntent",
+                    "samples": []
+                },
+                {
+                    "name": "AMAZON.NavigateHomeIntent",
+                    "samples": []
+                },
+                {
+                    "name": "PunchInIntent",
+                    "slots": [],
+                    "samples": [
+                        "bater o ponto",
+                        "dropar a caneta",
+                        "hora de almoço",
+                        "acabou essa porra",
+                        "começar a trabalhar",
+                        "parar de trabalhar",
+                        "bater ponto"
+                    ]
+                },
+                {
+                    "name": "EmpCodeIntent",
+                    "slots": [
+                        {
+                            "name": "emp_code",
+                            "type": "EMP"
+                        }
+                    ],
+                    "samples": [
+                        "login é {emp_code}",
+                        "código do empregador é {emp_code}",
+                        "eu trabalho na {emp_code}",
+                        "meu id é {emp_code}",
+                        "código de empregado é {emp_code}"
+                    ]
+                },
+                {
+                    "name": "PinCodeIntent",
+                    "slots": [
+                        {
+                            "name": "pin_code",
+                            "type": "AMAZON.FOUR_DIGIT_NUMBER"
+                        }
+                    ],
+                    "samples": ["pin é {pin_code}", "senha é {pin_code}"]
+                },
+                {
+                    "name": "CurrentWorkingHourIntent",
+                    "slots": [],
+                    "samples": [
+                        "horas trabalhadas",
+                        "ponto está aberto a quanto tempo",
+                        "falta muito para acabar o trabalho",
+                        "tenho quanto tempo de trabalho",
+                        "quantas horas de ponto",
+                        "já estou trabalhando a quanto tempo"
+                    ]
+                }
+            ],
+            "types": [
+                {
+                    "values": [
+                        {
+                            "id": "A12BC",
+                            "name": {
+                                "value": "A12BC",
+                                "synonyms": [
+                                    "A 12BC",
+                                    "A 12 BC",
+                                    "A12 BC",
+                                    "take",
+                                    "A12BC"
+                                ]
+                            }
+                        }
+                    ],
+                    "name": "EMP"
+                }
+            ]
+        },
+        "dialog": {
+            "intents": [
+                {
+                    "name": "PunchInIntent",
+                    "confirmationRequired": true,
+                    "prompts": {
+                        "confirmation": "Confirm.Intent.1026081033734"
+                    },
+                    "slots": []
+                },
+                {
+                    "name": "EmpCodeIntent",
+                    "confirmationRequired": true,
+                    "prompts": {
+                        "confirmation": "Confirm.Intent.1595186989722"
+                    },
+                    "slots": [
+                        {
+                            "name": "emp_code",
+                            "type": "EMP",
+                            "elicitationRequired": false,
+                            "confirmationRequired": false,
+                            "prompts": {}
+                        }
+                    ]
+                },
+                {
+                    "name": "PinCodeIntent",
+                    "confirmationRequired": true,
+                    "prompts": {
+                        "confirmation": "Confirm.Intent.1523319169517"
+                    },
+                    "slots": [
+                        {
+                            "name": "pin_code",
+                            "type": "AMAZON.FOUR_DIGIT_NUMBER",
+                            "elicitationRequired": false,
+                            "confirmationRequired": false,
+                            "prompts": {}
+                        }
+                    ]
+                }
+            ],
+            "delegationStrategy": "ALWAYS"
+        },
+        "prompts": [
+            {
+                "id": "Confirm.Intent.414247969668",
+                "variations": [
+                    {
+                        "type": "PlainText",
+                        "value": "Deseja modificar o seu login?"
+                    },
+                    {
+                        "type": "PlainText",
+                        "value": "Você deseja alterar as informações de colaborador?"
+                    }
+                ]
+            },
+            {
+                "id": "Confirm.Intent.1026081033734",
+                "variations": [
+                    {
+                        "type": "PlainText",
+                        "value": "Realmente deseja bater ponto?"
+                    }
+                ]
+            },
+            {
+                "id": "Confirm.Intent.1595186989722",
+                "variations": [
+                    {
+                        "type": "PlainText",
+                        "value": "Entendi que seu código de empregador é {emp_code} , certo?"
+                    }
+                ]
+            },
+            {
+                "id": "Confirm.Intent.1523319169517",
+                "variations": [
+                    {
+                        "type": "PlainText",
+                        "value": "Entendi que o seu pin é {pin_code} , certo?"
+                    }
+                ]
+            }
+        ]
+    },
+    "version": "13"
+}
