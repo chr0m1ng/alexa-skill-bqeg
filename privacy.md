@@ -31,5 +31,6 @@ Although most changes are likely to be minor, BQEG may change its Privacy Policy
 ## Change Log
 
 2020/12/14 - First version of the privacy policy
+2020/12/15 - Explicit the saved data on Data Retention Policy topic
 
 A big thank you to [Automattic](https://automattic.com) for providing this privacy policy template under [Creative Commmons](https://creativecommons.org/licenses/by-sa/4.0/).
