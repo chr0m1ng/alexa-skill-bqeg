@@ -14,7 +14,7 @@ With your authorization, we also obtain information about you from other sources
 
 ## Data Retention Policy
 
-We will retain the user provided data for ux purposes, but users may ask to remove them anytime, just by asking 'apagar todos os meus dados'.
+We will retain the user provided data (user employeer code and user pin code) for a better experience, but users may ask to remove them anytime by asking 'apagar todos os meus dados'.
 
 ## Log Data
 
